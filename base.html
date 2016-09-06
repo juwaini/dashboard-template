@@ -1,17 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+    {% block head %}
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/hds.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
         
-    <title>
-        Welcome To Healthcare Database System
-    </title>
+    <title>{% block title %} {% endblock title %} - Healthcare Database System</title>
+    {% endblock %}
 </head>
-
 <body>
     <div class="container">
     
